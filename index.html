@@ -34,10 +34,10 @@
 </head>
 <body>
 	<!-- Navigation-->
-	<header>
+	<header id="inicio_pag">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Eighth navbar example">
 			<div class="container">
-				<a class="navbar-brand" href="#">MENU</a>
+				<a class="navbar-brand" href="#inicio_pag">MENU</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -48,10 +48,10 @@
 							<a class="nav-link active px-5" aria-current="page" href="#"></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+							<a class="nav-link active" aria-current="page" href="#inicio_pag">INICIO</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">SERIES</a>
+							<a class="nav-link" href="#Series_pag">SERIES</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled">JUEGOS</a>
@@ -131,8 +131,111 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
+		<!-- Tarjetas-->
+		<div id="Series_pag">
+			<div class="container px-4 py-5" id="custom-cards">
+				<h2 class="pb-2 border-bottom"> Series</h2>
+
+				<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+					<div class="col">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/jt.jpg');">
+							<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+								<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Game of Thrones</h2>
+								<ul class="d-flex list-unstyled mt-auto">
+									<li class="me-auto">
+										<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ModalGT">Ver más</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/bd.jpg');">
+							<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+								<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Breaking Bad</h2>
+								<ul class="d-flex list-unstyled mt-auto">
+									<li class="me-auto">
+										<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ModalBB">Ver más</button>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('img/cp.jpg');">
+							<div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+								<h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">La Casa De Papel</h2>
+								<ul class="d-flex list-unstyled mt-auto">
+									<li class="me-auto">
+										<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ModalCP">Ver más</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="ModalGT" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="ModalBB" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="ModalCP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</main>
 
 </body>
 </html>
+
