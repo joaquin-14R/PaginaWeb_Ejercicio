@@ -14,6 +14,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/5b66c69289.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.gridder.min.css">
+
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<style>
@@ -198,7 +200,70 @@
 					</div>
 				</div>
 			</div>
+
+			
+			<div class="container">
+				<h2 class="pb-2 border-bottom">Otras series</h2>
+
+				<ul class="gridder">
+					<li class="gridder-list" data-griddercontent="#gridder-content-1">
+						<img src="img/dama.jpg" class="img-fluid">
+					</li>
+					<li class="gridder-list" data-griddercontent="#gridder-content-2">
+						<img src="img/st.jpg" class="img-fluid">
+					</li>
+					<li class="gridder-list" data-griddercontent="#gridder-content-3">
+						<img src="img/drk.jpg" class="img-fluid">
+					</li>
+					<li class="gridder-list" data-griddercontent="#gridder-content-4">
+						<img src="img/th.jpg" class="img-fluid">
+					</li>
+					<li class="gridder-list" data-griddercontent="#gridder-content-5">
+						<img src="img/dr.jpg" class="img-fluid">
+					</li>
+				</ul>
+
+
+				<div id="gridder-content-1" class="gridder-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/dama.jpg" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+				<div id="gridder-content-2" class="gridder-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/st.jpg" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+				<div id="gridder-content-3" class="gridder-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/drk.jpg" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+				<div id="gridder-content-4" class="gridder-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/th.jpg" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+				<div id="gridder-content-5" class="gridder-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/dr.jpg" class="img-fluid" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
+
 
 		<div class="b-example-divider"></div>
 		<div class="container col-xxl-8 px-4 py-5" id="Juegos_pag">
@@ -279,7 +344,7 @@
 							<div class="card-body">
 								<h5 class="card-title">Leonel Messi </h5>
 								<p class="card-text"></p>
-								
+
 							</div>
 							<img src="img/futbol.jpg" class="card-img-bottom" alt="...">
 						</div>
@@ -301,15 +366,15 @@
 											<h5 class="card-title">Ajedrez</h5>
 											<p class="card-text">El ajedrez es otro juego que me gusta seguir y jugar.</p>
 											<img src="img/ajedrez.jpg" class="card-img-bottom">
-											
+
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
-					
+
 					<div class="b-example-divider"></div>
 
 					<div class="modal fade" id="ModalGT" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -413,7 +478,37 @@
 					</footer>
 				</div>
 
-			</body>
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="js/jquery.gridder.js"></script>
+				<script>
+					$(function() {
 
-			</html>
+				    // Call Gridder
+				    $('.gridder').gridderExpander({
+				    	scroll: true,
+				    	scrollOffset: 30,
+				        scrollTo: "panel",                  // panel or listitem
+				        animationSpeed: 400,
+				        animationEasing: "easeInOutExpo",
+				        showNav: true,                      // Show Navigation
+				        nextText: "Next",                   // Next button text
+				        prevText: "Previous",               // Previous button text
+				        closeText: "Close",                 // Close button text
+				        onStart: function(){
+				            //Gridder Inititialized
+				        },
+				        onContent: function(){
+				            //Gridder Content Loaded
+				        },
+				        onClosed: function(){
+				            //Gridder Closed
+				        }
+				    });
+
+				});
+			</script>
+		</body>
+		</html>
+
 
